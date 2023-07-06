@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #nav {
+        background-color: rgb(15, 180, 230);
+        position: fixed;
+        width: 100%;
+        height: 50px;
+        position: sticky;
+        padding: auto;
+        top: 0%;
+    }
+    
+    #nav ul {
+        list-style-type: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 15px;
+        ;
+    }
+    
+    #nav ul li a {
+        text-decoration: none;
+        text-transform: uppercase;
+        color: aliceblue;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    #nav ul li a:hover {
+        color: rgb(70, 11, 219);
+        font-weight: bold;
+        text-shadow: 1px 1px 40px rgb(70, 11, 219);
+        transition: 0.4s;
+    }
+    
+    body {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        margin: 20px;
+        padding: 15px;
+        font-size: medium;
+    }
+    
+    #ch {
+        background-color: white;
+        width: 100%;
+        border-radius: 5px;
+        border: 1px solid rgb(16, 139, 200);
+        padding: 5px;
+    }
+    
+    input[type="text"],
+    input[type="date"],
+    input[type="number"],
+    input[type="password"],
+    input[type="email"],
+    textarea,
+    select {
+        width: 100%;
+        border-radius: 5px;
+        border: 1px solid grey;
+        padding: 5px;
+    }
+    
+    input[type="submit"] {
+        background-color: rgb(17, 194, 170);
+        padding: 3px;
+        border: none;
+        color: whitesmoke;
+        font-weight: bolder;
+        width: 25%;
+        cursor: pointer;
+    }
+    
+    .container {
+        border: 2px solid black;
+        padding: 15px;
+        width: 50%;
+        background-color: lightgray;
+        border-radius: 0.7%;
+    }
+    
+    input[type="submit"]:hover {
+        background-color: rgb(15, 148, 230);
+    }
+    
+    #headerl {
+        text-align: center;
+    }
+</style>
+
+<body>
+    <div id="nav">
+
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">About us</a></li>
+            <li><a href="">Service</a></li>
+            <li><a href="">Contact</a></li>
+            <li><a href="">Help</a></li>
+        </ul>
+    </div>
+    <br>
+    <div class="container">
+        <h1 id="headerl">PAYMENT FORM</h1>
+        <hr>
+        <h3>CONTACT INFORMATION</h3>
+        <p>Required fields are followed by *</p>
+        <p> Name:* <input type="text"></p>
+        <fieldset id="ch">
+            <legend>
+                Gender
+            </legend>
+            <p>
+                <input type="radio" name="gender" id="male">Male
+                <input type="radio" name="gender" id="female">Female
+            </p>
+        </fieldset>
+        <p>
+            Address:* <textarea cols="140" rows="7"></textarea>
+        </p>
+
+        <p>
+            Email:* <input type="email">
+        </p>
+        <p>
+            Pincode:* <input type="number">
+        </p>
+        <h3>PAYMENT INFORMATION</h3>
+        Card Type:*
+        <select name="---Select-Card-Type---" id="cardtype">
+        <option><b>Select-Card-Type</b></option>
+        <option>rupay</option>
+        <option>visa</option>
+        <option>mastercard</option>
+    </select>
+        <p>
+            Card Number:<input type="number">
+        </p>
+        <p>
+            Expiration date:<input type="date">
+        </p>
+        <p>
+            CVV:<input type="number">
+        </p>
+        <p>
+            <input type="submit" value="Pay Now">
+        </p>
+    </div>
+</body>
+
+</html>
